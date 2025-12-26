@@ -20,4 +20,3 @@ bool checkArmstrong(int n){
     if (sum == original) return true;
     else return false;
 }
-
