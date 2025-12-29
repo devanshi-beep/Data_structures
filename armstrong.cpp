@@ -1,3 +1,9 @@
+int power(int base, int exp) {
+    int result = 1;
+    while (exp--) result *= base;
+    return result;
+}
+
 bool checkArmstrong(int n){
     if (n == 1) return true;
 
@@ -13,7 +19,8 @@ bool checkArmstrong(int n){
     temp = n; // reset for digit power sum
     while (temp > 0){
         int last = temp % 10;
-        sum += (int)pow(last, count);  // use digit count
+        //sum += (int)pow(last, count);  // use digit count
+        sum = power(last, count);
         temp /= 10;
     }
 
